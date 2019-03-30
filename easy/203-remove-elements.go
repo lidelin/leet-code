@@ -35,15 +35,22 @@ func removeElements(head *ListNode, val int) *ListNode {
 	return head
 }
 
-func createList() *ListNode {
-	return &ListNode{Val: 1,
-		Next: &ListNode{Val: 2,
-			Next: &ListNode{Val: 6,
-				Next: &ListNode{Val: 3,
-					Next: &ListNode{Val: 4,
-						Next: &ListNode{Val: 5,
-							Next: &ListNode{Val: 6,
-								Next: nil}}}}}}}
+func createList(values []int) *ListNode {
+	head := &ListNode{Next: nil}
+	current := head
+	length := len(values)
+
+	for i := 0; i < length; i++ {
+		current.Val = values[i]
+		if i < length-1 {
+			current.Next = &ListNode{Next: nil}
+			current = current.Next
+		} else {
+			current.Next = nil
+		}
+	}
+
+	return head
 }
 
 func printList(head *ListNode) {
@@ -67,7 +74,7 @@ func printList(head *ListNode) {
 }
 
 func main() {
-	list := createList()
+	list := createList([]int{1, 2, 6, 3, 4, 5, 6})
 	printList(list)
 
 	list = removeElements(list, 6)
