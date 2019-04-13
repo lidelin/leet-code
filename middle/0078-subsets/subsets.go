@@ -1,8 +1,6 @@
-package main
+package _078_subsets
 
-import "fmt"
-
-func subsets(nums []int) [][]int {
+func Subsets(nums []int) [][]int {
 	results := [][]int{{}}
 
 	for _, num := range nums {
@@ -16,8 +14,4 @@ func subsets(nums []int) [][]int {
 	}
 
 	return results
-}
-
-func main() {
-	fmt.Println(subsets([]int{9, 0, 3, 5, 7}))
 }
