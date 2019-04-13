@@ -10,6 +10,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func MakeList(values []int) *ListNode {
+	return CreateList(values)
+}
+
 func CreateList(values []int) *ListNode {
 	head := &ListNode{Next: nil}
 	current := head
