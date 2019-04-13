@@ -8,7 +8,7 @@ func deleteNode(node *utils.ListNode) {
 }
 
 func main() {
-	list := utils.CreateList([]int{1, 3, 5, 7, 9})
+	list := utils.MakeList([]int{1, 3, 5, 7, 9})
 
 	deleteNode(list.Next.Next.Next)
 

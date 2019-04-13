@@ -30,7 +30,7 @@ func removeElements(head *utils.ListNode, val int) *utils.ListNode {
 }
 
 func main() {
-	list := utils.CreateList([]int{1, 2, 6, 3, 4, 5, 6})
+	list := utils.MakeList([]int{1, 2, 6, 3, 4, 5, 6})
 	utils.PrintList(list)
 
 	list = removeElements(list, 6)
