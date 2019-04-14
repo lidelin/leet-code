@@ -33,3 +33,7 @@ func (queue *Queue) Front() interface{} {
 func (queue *Queue) IsEmpty() bool {
 	return queue.position == len(queue.items)
 }
+
+func (queue *Queue) Size() int {
+	return len(queue.items) - queue.position
+}

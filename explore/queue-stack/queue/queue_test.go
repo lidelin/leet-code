@@ -20,14 +20,19 @@ func TestQueue(t *testing.T) {
 
 	ast.False(queue.IsEmpty())
 	ast.Equal(5, queue.Front())
+	ast.Equal(1, queue.Size())
 
 	ast.True(queue.EnQueue(3))
+	ast.Equal(2, queue.Size())
+
 	ast.True(queue.DeQueue())
 	ast.False(queue.IsEmpty())
 	ast.Equal(3, queue.Front())
+	ast.Equal(1, queue.Size())
 
 	ast.True(queue.DeQueue())
 	ast.True(queue.IsEmpty())
+	ast.Equal(0, queue.Size())
 
 	ast.False(queue.DeQueue())
 
