@@ -1,7 +1,7 @@
 package queue
 
 type Queue struct {
-	data     []int
+	items    []interface{}
 	position int
 }
 
@@ -9,23 +9,27 @@ func NewQueue() *Queue {
 	return &Queue{position: 0}
 }
 
-func (queue *Queue) EnQueue(value int) bool {
-	queue.data = append(queue.data, value)
+func (queue *Queue) EnQueue(item interface{}) bool {
+	queue.items = append(queue.items, item)
 	return true
 }
 
 func (queue *Queue) DeQueue() bool {
+	if queue.IsEmpty() {
+		return false
+	}
+
 	queue.position++
 	return true
 }
 
-func (queue *Queue) Front() int {
+func (queue *Queue) Front() interface{} {
 	if queue.IsEmpty() {
 		return -1
 	}
-	return queue.data[queue.position]
+	return queue.items[queue.position]
 }
 
 func (queue *Queue) IsEmpty() bool {
-	return queue.position == len(queue.data)
+	return queue.position == len(queue.items)
 }
