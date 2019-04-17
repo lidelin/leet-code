@@ -13,4 +13,7 @@ func TestBfs(t *testing.T) {
 
 	ast.NotEqual(-1, Bfs(root, 4))
 	ast.Equal(-1, Bfs(root, 5))
+
+	ast.NotEqual(-1, Bfs2(root, 4))
+	ast.Equal(-1, Bfs2(root, 5))
 }
