@@ -5,7 +5,11 @@ import "leet-code/utils"
 type ListNode = utils.ListNode
 
 func ReverseList(head *ListNode) *ListNode {
-	current := head.Next
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	current := head
 	next := current.Next
 	nextNext := next.Next
 
@@ -21,7 +25,5 @@ func ReverseList(head *ListNode) *ListNode {
 		}
 	}
 
-	head.Next = current
-
-	return head
+	return current
 }
