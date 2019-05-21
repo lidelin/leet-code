@@ -12,17 +12,11 @@ type ListNode struct {
 
 func MakeList(values []int) *ListNode {
 	head := &ListNode{Next: nil}
-	current := head
-	length := len(values)
+	prev := head
 
-	for i := 0; i < length; i++ {
-		current.Val = values[i]
-		if i < length-1 {
-			current.Next = &ListNode{Next: nil}
-			current = current.Next
-		} else {
-			current.Next = nil
-		}
+	for _, value := range values {
+		prev.Next = &ListNode{Val: value, Next: nil}
+		prev = prev.Next
 	}
 
 	return head
@@ -34,13 +28,9 @@ func PrintList(head *ListNode) {
 	}
 
 	var str []string
-	current := head
+	current := head.Next
 
-	for {
-		if current == nil {
-			break
-		}
-
+	for current != nil {
 		str = append(str, strconv.Itoa(current.Val))
 		current = current.Next
 	}
