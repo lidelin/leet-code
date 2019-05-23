@@ -47,3 +47,11 @@ func PrintList(head *ListNode) {
 
 	fmt.Println(str)
 }
+
+func CatList(l1, l2 *ListNode) {
+	for l1.Next != nil {
+		l1 = l1.Next
+	}
+
+	l1.Next = l2
+}
