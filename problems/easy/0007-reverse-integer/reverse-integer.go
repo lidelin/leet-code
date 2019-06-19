@@ -1,11 +1,9 @@
-package main
-
-import "fmt"
+package _0007_reverse_integer
 
 const intMax = (1 << 31) - 1
 const intMin = -(1 << 31)
 
-func reverse(x int) int {
+func Reverse(x int) int {
 	rev := 0
 
 	for x != 0 {
@@ -23,8 +21,4 @@ func reverse(x int) int {
 	}
 
 	return rev
-}
-
-func main() {
-	fmt.Println(reverse(1534236469), reverse(123))
 }
