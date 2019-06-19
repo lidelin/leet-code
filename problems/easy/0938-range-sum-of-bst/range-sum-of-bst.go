@@ -7,27 +7,23 @@ import (
 type TreeNode = utils.TreeNode
 
 func RangeSumBST(root *TreeNode, L int, R int) int {
+	if root == nil {
+		return 0
+	}
+
 	sum := 0
 
-	rangeSumBST(root, L, R, &sum)
+	if root.Val >= L && root.Val <= R {
+		sum += root.Val
+	}
+
+	if root.Val > L {
+		sum += RangeSumBST(root.Left, L, R)
+	}
+
+	if root.Val < R {
+		sum += RangeSumBST(root.Right, L, R)
+	}
 
 	return sum
-}
-
-func rangeSumBST(root *TreeNode, L int, R int, sum *int) {
-	if root == nil {
-		return
-	}
-
-	if root.Val >= L && root.Val <= R {
-		*sum += root.Val
-	}
-
-	if root.Left != nil && root.Val >= L {
-		rangeSumBST(root.Left, L, R, sum)
-	}
-
-	if root.Right != nil && root.Val <= R {
-		rangeSumBST(root.Right, L, R, sum)
-	}
 }
