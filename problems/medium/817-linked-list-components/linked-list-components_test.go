@@ -1,8 +1,8 @@
 package _817_linked_list_components
 
 import (
+	"github.com/lidelin/leet-code/utils"
 	"github.com/stretchr/testify/assert"
-	"leet-code/utils"
 	"testing"
 )
 

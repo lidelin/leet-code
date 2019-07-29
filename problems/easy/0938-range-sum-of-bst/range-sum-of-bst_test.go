@@ -1,8 +1,8 @@
 package _0938_range_sum_of_bst
 
 import (
+	"github.com/lidelin/leet-code/utils"
 	"github.com/stretchr/testify/assert"
-	"leet-code/utils"
 	"testing"
 )
 

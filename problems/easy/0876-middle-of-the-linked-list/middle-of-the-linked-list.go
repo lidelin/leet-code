@@ -1,8 +1,6 @@
 package _876_middle_of_the_linked_list
 
-import (
-	"leet-code/utils"
-)
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 

@@ -1,8 +1,8 @@
 package _234_palindrome_linked_list
 
 import (
+	"github.com/lidelin/leet-code/utils"
 	"github.com/stretchr/testify/assert"
-	"leet-code/utils"
 	"testing"
 )
 

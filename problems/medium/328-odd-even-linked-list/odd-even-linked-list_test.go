@@ -1,8 +1,8 @@
 package _28_odd_even_linked_list
 
 import (
+	"github.com/lidelin/leet-code/utils"
 	"github.com/stretchr/testify/assert"
-	"leet-code/utils"
 	"testing"
 )
 

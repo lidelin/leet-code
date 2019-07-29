@@ -1,6 +1,6 @@
 package _0230_kth_smallest
 
-import "leet-code/utils"
+import "github.com/lidelin/leet-code/utils"
 
 type TreeNode = utils.TreeNode
 

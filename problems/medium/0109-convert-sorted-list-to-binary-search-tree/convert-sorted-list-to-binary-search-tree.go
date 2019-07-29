@@ -1,8 +1,6 @@
 package _109_convert_sorted_list_to_binary_search_tree
 
-import (
-	"leet-code/utils"
-)
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 type TreeNode = utils.TreeNode

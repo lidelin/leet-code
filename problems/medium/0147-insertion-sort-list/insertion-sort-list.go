@@ -1,8 +1,6 @@
 package _147_insertion_sort_list
 
-import (
-	"leet-code/utils"
-)
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 

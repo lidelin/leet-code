@@ -1,6 +1,6 @@
 package _021_merge_two_sorted_lists
 
-import "leet-code/utils"
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 

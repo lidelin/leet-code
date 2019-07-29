@@ -1,8 +1,8 @@
 package queue_stack
 
 import (
-	"leet-code/explore/queue-stack/queue"
-	"leet-code/utils"
+	"github.com/lidelin/leet-code/explore/queue-stack/queue"
+	"github.com/lidelin/leet-code/utils"
 )
 
 type Node = utils.TreeNode

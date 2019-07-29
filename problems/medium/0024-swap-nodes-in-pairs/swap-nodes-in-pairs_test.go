@@ -1,8 +1,8 @@
 package _024_swap_nodes_in_pairs
 
 import (
+	"github.com/lidelin/leet-code/utils"
 	"github.com/stretchr/testify/assert"
-	"leet-code/utils"
 	"testing"
 )
 

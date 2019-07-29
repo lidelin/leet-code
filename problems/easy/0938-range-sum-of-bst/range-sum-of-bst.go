@@ -1,8 +1,6 @@
 package _0938_range_sum_of_bst
 
-import (
-	"leet-code/utils"
-)
+import "github.com/lidelin/leet-code/utils"
 
 type TreeNode = utils.TreeNode
 

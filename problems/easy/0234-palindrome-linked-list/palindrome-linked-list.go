@@ -1,6 +1,6 @@
 package _234_palindrome_linked_list
 
-import "leet-code/utils"
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 

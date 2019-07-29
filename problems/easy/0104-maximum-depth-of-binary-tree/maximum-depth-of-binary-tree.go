@@ -1,6 +1,6 @@
 package _0104_maximum_depth_of_binary_tree
 
-import "leet-code/utils"
+import "github.com/lidelin/leet-code/utils"
 
 func MaxDepth(root *utils.TreeNode) int {
 	if root == nil {

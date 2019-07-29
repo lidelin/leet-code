@@ -1,6 +1,6 @@
 package main
 
-import "leet-code/utils"
+import "github.com/lidelin/leet-code/utils"
 
 func deleteNode(node *utils.ListNode) {
 	node.Val = node.Next.Val

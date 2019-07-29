@@ -1,8 +1,8 @@
 package _160_intersection_of_two_linked_lists
 
 import (
+	"github.com/lidelin/leet-code/utils"
 	"github.com/stretchr/testify/assert"
-	"leet-code/utils"
 	"testing"
 )
 

@@ -1,8 +1,6 @@
 package _024_swap_nodes_in_pairs
 
-import (
-	"leet-code/utils"
-)
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 

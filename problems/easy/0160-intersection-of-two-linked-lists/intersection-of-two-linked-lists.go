@@ -1,6 +1,6 @@
 package _160_intersection_of_two_linked_lists
 
-import "leet-code/utils"
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 

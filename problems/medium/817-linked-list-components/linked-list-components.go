@@ -1,8 +1,6 @@
 package _817_linked_list_components
 
-import (
-	"leet-code/utils"
-)
+import "github.com/lidelin/leet-code/utils"
 
 type ListNode = utils.ListNode
 
