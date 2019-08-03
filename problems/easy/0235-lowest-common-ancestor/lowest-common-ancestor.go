@@ -11,18 +11,28 @@ func LowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 
 	if p.Val < root.Val && q.Val < root.Val && root.Left != nil {
 		return LowestCommonAncestor(root.Left, p, q)
-	}
-
-	if p.Val > root.Val && q.Val > root.Val && root.Right != nil {
+	} else if p.Val > root.Val && q.Val > root.Val && root.Right != nil {
 		return LowestCommonAncestor(root.Right, p, q)
 	}
 
-	if p.Val == root.Val {
-		return p
+	return root
+}
+
+func LowestCommonAncestorIteration(root, p, q *TreeNode) *TreeNode {
+	if root == nil {
+		return root
 	}
 
-	if q.Val == root.Val {
-		return q
+	node := root
+
+	for node != nil {
+		if p.Val < node.Val && q.Val < node.Val && node.Left != nil {
+			node = node.Left
+		} else if p.Val > node.Val && q.Val > node.Val && node.Right != nil {
+			node = node.Right
+		} else {
+			return node
+		}
 	}
 
 	return root
