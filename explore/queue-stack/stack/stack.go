@@ -1,56 +1,34 @@
 package stack
 
 type Stack struct {
-	items    []interface{}
-	position int
+	items []interface{}
 }
-
-const CAPACITY = 1024
 
 func NewStack() *Stack {
-	return &Stack{
-		items:    make([]interface{}, CAPACITY),
-		position: -1}
+	return &Stack{}
 }
 
-func (stack *Stack) Push(item interface{}) bool {
-	if stack.isFull() {
-		newSpace := make([]interface{}, 2*len(stack.items))
-		copy(newSpace, stack.items)
-		stack.items = newSpace
-	}
-
-	stack.position++
-	stack.items[stack.position] = item
-
-	return true
+func (stack *Stack) Push(item interface{}) {
+	stack.items = append(stack.items, item)
 }
 
 func (stack *Stack) Pop() interface{} {
-	if stack.isEmpty() {
+	length := len(stack.items)
+	if length == 0 {
 		return nil
 	}
 
-	last := stack.items[stack.position]
-
-	stack.items[stack.position] = nil
-	stack.position--
+	last := stack.items[length-1]
+	stack.items = stack.items[:length-1]
 
 	return last
 }
 
-func (stack *Stack) Peek() interface{} {
-	if stack.isEmpty() {
+func (stack *Stack) Top() interface{} {
+	length := len(stack.items)
+	if length == 0 {
 		return nil
 	}
 
-	return stack.items[stack.position]
-}
-
-func (stack *Stack) isEmpty() bool {
-	return stack.position == -1
-}
-
-func (stack *Stack) isFull() bool {
-	return stack.position == len(stack.items)-1
+	return stack.items[len(stack.items)-1]
 }

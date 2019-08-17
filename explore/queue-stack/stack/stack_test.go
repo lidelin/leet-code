@@ -10,40 +10,27 @@ func TestStack(t *testing.T) {
 
 	stack := NewStack()
 	ast.NotNil(stack)
-	ast.True(stack.isEmpty())
-	ast.False(stack.isFull())
-	ast.Nil(stack.Peek())
+	ast.Nil(stack.Top())
 
 	stack.Push(1)
-	ast.False(stack.isEmpty())
-	ast.False(stack.isFull())
-	ast.Equal(1, stack.Peek())
+	ast.Equal(1, stack.Top())
 
 	ast.Equal(1, stack.Pop())
-	ast.True(stack.isEmpty())
-	ast.False(stack.isFull())
+	ast.Nil(stack.Top())
 
 	limit := 1023
 	for i := 0; i < limit; i++ {
 		stack.Push(i)
-		ast.False(stack.isEmpty())
-		ast.False(stack.isFull())
-		ast.Equal(i, stack.Peek())
+		ast.Equal(i, stack.Top())
 	}
 
 	stack.Push(1023)
-	ast.False(stack.isEmpty())
-	ast.True(stack.isFull())
-
 	stack.Push(1024)
-	ast.False(stack.isFull())
 
 	for i := 1024; i >= 0; i-- {
-		ast.Equal(i, stack.Peek())
+		ast.Equal(i, stack.Top())
 		ast.Equal(i, stack.Pop())
 	}
 
-	ast.True(stack.isEmpty())
-	ast.False(stack.isFull())
-	ast.Nil(stack.Peek())
+	ast.Nil(stack.Top())
 }
