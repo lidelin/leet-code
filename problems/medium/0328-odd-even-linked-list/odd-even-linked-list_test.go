@@ -1,4 +1,4 @@
-package _28_odd_even_linked_list
+package _328_odd_even_linked_list
 
 import (
 	"github.com/lidelin/leet-code/utils"
